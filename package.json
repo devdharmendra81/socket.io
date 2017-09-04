@@ -1,0 +1,24 @@
+{
+  "name": "dashboard",
+  "description": "Account Manager/Creative Dashboard",
+  "version": "1.0.0",
+  "author": "Dustin",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt-nodejs": "*",
+    "body-parser": "*",
+    "bookshelf": "0.5",
+    "cookie-parser": "*",
+    "cors": "^2.8.4",
+    "express": "4.x",
+    "express-session": "*",
+    "jsforce": "*",
+    "moment-timezone": "^0.5.13",
+    "mysql": "*",
+    "nodemailer": "^4.1.0",
+    "passport": "*",
+    "passport-local": "*",
+    "request": "^2.81.0",
+    "socket.io": "*"
+  }
+}

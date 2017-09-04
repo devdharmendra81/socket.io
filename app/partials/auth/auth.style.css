@@ -1,0 +1,49 @@
+.page-signin {
+    background-color: transparent;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;    position: relative;
+
+    background-color: #53f;
+    background: -moz-linear-gradient(-45deg,  #53f 0%, #05d5ff 70%, #a6ffcb 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#53f), color-stop(70%,#05d5ff), color-stop(100%,#a6ffcb)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg,  #53f 0%,#05d5ff 70%,#a6ffcb 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg,  #53f 0%,#05d5ff 70%,#a6ffcb 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg,  #53f 0%,#05d5ff 70%,#a6ffcb 100%); /* IE10+ */
+    background: linear-gradient(135deg,  #53f 0%,#05d5ff 70%,#a6ffcb 100%); /* W3C */
+}
+.section-signin {
+    position: absolute;
+    left: 50%;
+    margin: 100px 0 0 -180px;
+    width: 360px;
+    height: 450px;
+}
+.logo-font{
+    font-size: 30px;
+    font-weight: 700;
+}
+.logo-font a {
+    color: #8bc832;
+    text-decoration: none;
+    cursor: pointer;
+}
+.tab-pane h3{
+    text-transform: uppercase;
+    color: #444;
+}
+.toggler.list-unstyled a{
+    font-weight: bolder;
+}
+.toggler li.active {
+    display: none;
+}
+.toggler li {
+    margin: 0 0 7px 0;
+}
+.toggler li a{
+    cursor: pointer;
+}
+p {
+    margin-bottom: 0.5em;
+}

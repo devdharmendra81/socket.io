@@ -1,0 +1,108 @@
+body{
+    background-color: #eff3f8;
+}
+.profile-usertitle .profile-usertitle-counter {
+    font-size: 18px;
+    font-weight: 700;
+    color: #8BC832
+}
+
+.profile-usertitle .profile-usertitle-name {
+    color: #464648;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase
+}
+
+.profile-usertitle .profile-usertitle-job {
+    color: #464648
+}
+
+.profile-userbuttons {
+    padding-top: 10px;
+    border-top: 1px solid #ddd
+}
+
+.page-header .page-header-top .page-logo .logo-default {
+    margin: 15px 0;
+    width: 90px;
+    height: auto
+}
+
+.page-prefooter a, .page-prefooter h2 {
+    color: #8BC832
+}
+
+.page-prefooter .subscribe-form .btn {
+    background: #8BC832;
+    border-color: #8BC832
+}
+
+.page-header .page-header-top .top-menu .navbar-nav > li.dropdown-inbox > .dropdown-toggle > .circle {
+    background: #8BC832
+}
+
+.page-header .page-header-top .top-menu .navbar-nav > li.dropdown-inbox > .dropdown-toggle > .corner {
+    border-color: transparent transparent transparent #8BC832
+}
+
+table.table tr > td, table.table tr > th {
+    font-size: 12px
+}
+
+.row.text-center > div {
+    display: inline-block;
+    float: none;
+}
+
+/*BEGIN LOADING PANEL*/
+.loadingbg {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: #000;
+    filter: alpha(opacity=60);
+    opacity: 0.1;
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+    z-index: 100000;
+}
+
+.loadingContent {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 100001;
+    color: #FFFFFF;
+    font-size: 25px;
+    text-align: center;
+}
+.loadingContent .fa.fa-spinner.fa-spin{ font-size: 50px;color: #8bc832;}
+
+/*END LOADING PANEL*/
+
+.error-msg{color: #e73d4a;}
+
+.dashboard-body{ margin: 60px; width:auto;}
+
+.queue-tile{ overflow: auto; overflow-y: hidden; white-space: nowrap;}
+
+.queue-tile .profile-userbuttons{ text-align: center;}
+
+.queue-tile .btn-link{display: block; margin: auto !important;}
+
+.filter-active{background: #e1e5ec;}
+
+.filter-remove, .filter-remove:hover{color: #e00e0e; font-size: 14px;}

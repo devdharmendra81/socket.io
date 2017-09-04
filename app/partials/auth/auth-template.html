@@ -1,0 +1,154 @@
+<div class="page-signin">
+    <section class="section section-signin">
+        <p class="text-center logo-font">
+            <a><i class="fa icon-dashboard" aria-hidden="true"></i> Creative Dashboard</a>
+        </p>
+        <div class="panel panel-default">
+            <div class="panel-body" role="tabpanel">
+                <!-- forms container -->
+                <div class="tab-content">
+                    <!-- sign in -->
+                    <div role="tabpanel" class="tab-pane active" id="do-signin">
+                        <h3 class="text-center">Sign in</h3>
+                        <form name='signInForm' method="post" ng-submit="signIn()" novalidate>
+                            <div class="form-group"
+                                 ng-class="{'has-error':signInForm.username.$touched && signInForm.username.$invalid}">
+                                <label class="sr-only">Username <span class="text-danger">*</span></label>
+                                <input name="username" type="text" class="form-control" placeholder="Username"
+                                       ng-model="user.username" required>
+                                <span class="error-msg"
+                                      ng-show="signInForm.username.$touched && signInForm.username.$invalid">
+                                     <span ng-show="signInForm.username.$error.required">Required&nbsp;field</span>
+                                 </span>
+                            </div>
+                            <div class="form-group"
+                                 ng-class="{'has-error':signInForm.password.$touched && signInForm.password.$invalid}">
+                                <label class="sr-only">Password <span class="text-danger">*</span></label>
+                                <input name="password" type="password" class="form-control" placeholder="Password"
+                                       ng-model="user.password" required>
+                                <span class="error-msg"
+                                      ng-show="signInForm.password.$touched && signInForm.password.$invalid">
+                                     <span ng-show="signInForm.password.$error.required">Required&nbsp;field</span>
+                                 </span>
+                            </div>
+                            <div ng-if="loginErrorMsg" class="text-justify alert alert-danger">
+                                <span>{{loginErrorMsg}}</span>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-block btn-action btn-primary" ng-disabled="signInForm.$invalid"
+                                        type="submit">Sign in
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- end of sign in -->
+
+                    <!-- sign up -->
+                    <div role="tabpanel" class="tab-pane" id="do-signup">
+                        <h3 class="text-center">Register New Account</h3>
+                        <form name='signUpForm' method="post" ng-submit="signUp()" novalidate>
+                            <div class="form-group"
+                                 ng-class="{'has-error':signUpForm.username.$touched && signUpForm.username.$invalid}">
+                                <label class="sr-only">Username <span class="text-danger">*</span></label>
+                                <input name="username" type="text" class="form-control" placeholder="Username"
+                                       ng-model="user.username" required>
+                                <span class="error-msg"
+                                      ng-show="signUpForm.username.$touched && signUpForm.username.$invalid">
+                                     <span ng-show="signUpForm.username.$error.required">Required&nbsp;field</span>
+                                 </span>
+                            </div>
+                            <div class="form-group"
+                                 ng-class="{'has-error':signUpForm.password.$touched && signUpForm.password.$invalid}">
+                                <label class="sr-only">Password <span class="text-danger">*</span></label>
+                                <input name="password" type="password" class="form-control" placeholder="Password"
+                                       ng-model="user.password" required>
+                                <span class="error-msg"
+                                      ng-show="signUpForm.password.$touched && signUpForm.password.$invalid">
+                                     <span ng-show="signUpForm.password.$error.required">Required&nbsp;field</span>
+                                 </span>
+                            </div>
+                            <div class="form-group"
+                                 ng-class="{'has-error':(signUpForm.confirmPassword.$touched && signUpForm.confirmPassword.$invalid) || passwordMismatch}">
+                                <label class="sr-only"> Confirm Password <span class="text-danger">*</span></label>
+                                <input name="confirmPassword" type="password" class="form-control" placeholder="Confirm Password"
+                                       ng-model="confirmPassword" required>
+                                <span class="error-msg"
+                                      ng-show="signUpForm.confirmPassword.$touched && signUpForm.confirmPassword.$invalid">
+                                     <span ng-show="signUpForm.confirmPassword.$error.required">Required&nbsp;field</span>
+                                 </span>
+                                <span class="error-msg" ng-show="passwordMismatch">
+                                     <span>Password Mismatch</span>
+                                 </span>
+                            </div>
+                            <div class="form-group"
+                                 ng-class="{'has-error':signUpForm.userEmail.$touched && signUpForm.userEmail.$invalid}">
+                                <label class="sr-only">Email Address <span class="text-danger">*</span></label>
+                                <input name="userEmail" type="email" class="form-control" placeholder="Email Address"
+                                       ng-model="user.email" required>
+                                <span class="error-msg"
+                                      ng-show="signUpForm.userEmail.$touched && signUpForm.userEmail.$invalid">
+                                     <span ng-show="signUpForm.userEmail.$error.required">Required&nbsp;field</span>
+                                 </span>
+                            </div>
+                            <div ng-if="signupErrorMsg" class="text-justify alert alert-danger">
+                                <span>{{signupErrorMsg}}</span>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-block btn-action btn-primary"
+                                        ng-disabled="signUpForm.$invalid" type="submit">Register
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- end of sign in -->
+
+                    <!-- forgot password -->
+                    <div role="tabpanel" class="tab-pane" id="do-forgotpass">
+                        <h3 class="text-center">Reset password</h3>
+                        <p class="text-center alert alert-info">
+                            A confirmation link will be sent to your email.
+                        </p>
+                        <form name="resetForm" method="post" ng-submit="resetPassword()" novalidate>
+                            <div class="form-group"
+                                 ng-class="{'has-error':resetForm.userEmail.$touched && resetForm.userEmail.$invalid}">
+                                <label class="sr-only">Email Address<span class="text-danger">*</span></label>
+                                <input name="userEmail" type="email" class="form-control" placeholder="Email Address" ng-model="user.email" required>
+                                <span class="error-msg"
+                                      ng-show="resetForm.userEmail.$touched && resetForm.userEmail.$invalid">
+                                     <span ng-show="resetForm.userEmail.$error.required">Required&nbsp;field</span>
+                                 </span>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-block btn-action btn-primary" type="submit" ng-disabled="resetForm.$invalid">Reset password</button>
+                            </div>
+                            <div ng-if="isResetSuccess" class="text-center alert alert-success">
+                                <span>{{resetSuccessMsg}}</span>
+                            </div>
+                            <div ng-if="isResetFailed" class="text-center alert alert-danger">
+                                <span>{{resetFailedsMsg}}</span>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- end of forgot password -->
+                </div>
+                <!-- end of forms container -->
+
+                <!-- the switcher between forms -->
+                <ul class="toggler text-center list-unstyled" role="tablist">
+                    <li role="presentation" class="active">Changed your mind? <a data-target="#do-signin"
+                                                                                 aria-controls="do-signin" role="tab"
+                                                                                 data-toggle="tab"
+                                                                                 ng-click="clickSignInLink()">Back to sign in</a></li>
+                    <li role="presentation">Don't have an account? <a data-target="#do-signup" aria-controls="do-signup"
+                                                                      role="tab" data-toggle="tab"
+                                                                      ng-click="clickSignUpLink()">Create one now</a>
+                    </li>
+                    <li role="presentation"><a data-target="#do-forgotpass" aria-controls="do-forgotpass" role="tab"
+                                               data-toggle="tab" ng-click="clickForgetPasswordLink()">Forgot password?</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <!-- /panel -->
+    </section>
+</div>

@@ -1,0 +1,62 @@
+@import 'mixins.less';
+
+// Variables
+
+@brand-primary: #8BC832;
+@brand-secondary: #464648;
+@link-color: @brand-primary;
+@link-color-hover: lighten(@link-color, 10%);
+@text-color: #666;
+
+@font-size-base: 14px;
+@grid-gutter-width: 30px;
+@line-height-base: @font-size-base * 1.6;
+
+
+.profile-usertitle {
+	.profile-usertitle-counter {
+		font-size: 18px;
+		font-weight: 700;
+		color: @brand-primary;
+	}
+
+	.profile-usertitle-name {
+		color: @brand-secondary;
+		margin: 0;
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	.profile-usertitle-job {
+		color: @brand-secondary;
+	}
+}
+
+.profile-userbuttons {
+	padding-top: 10px;
+	border-top: 1px solid #ddd;
+}
+
+.page-header .page-header-top .page-logo .logo-default {
+	margin: 15px 0;
+	width: 90px;
+	height: auto;
+}
+
+.page-prefooter a, .page-prefooter h2 {
+	color: @brand-primary;
+}
+
+.page-prefooter .subscribe-form .btn {
+	background: @brand-primary;
+	border-color: @brand-primary;
+}
+
+.page-header .page-header-top .top-menu .navbar-nav>li.dropdown-inbox>.dropdown-toggle>.circle {
+	background: @brand-primary;
+}
+
+.page-header .page-header-top .top-menu .navbar-nav>li.dropdown-inbox>.dropdown-toggle>.corner {
+	border-color: transparent transparent transparent @brand-primary;
+}

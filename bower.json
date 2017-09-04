@@ -1,0 +1,24 @@
+{
+  "name": "Dashboard",
+  "description": "Account Manager/Creative Dashboard",
+  "main": "app.js",
+  "authors": [
+    "Dustin"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-ui-router": "^1.0.6",
+    "oclazyload": "^1.1.0",
+    "angular-filter": "^0.5.16"
+  }
+}
